@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genre | Anime Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h1>Otaku Sleuth</h1>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="favorites.html">Favorites</a>
+        </div>
+    </nav>
+
+
+    <section class="genre-header">
+
+        <a href="index.html" class="back-link">← Back to search</a>
+
+        <h2 id="genreTitle">Genre</h2>
+
+        <p id="genreSubtitle">Popular anime in this genre.</p>
+
+    </section>
+
+
+    <section class="results-section">
+
+        <p id="errorMessage"></p>
+
+        <p id="loadingMessage"></p>
+
+        <div id="animeResults" class="anime-results"></div>
+
+        <div class="load-more-wrap">
+            <button id="loadMoreButton" class="load-more-button" hidden>Load more</button>
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <div class="footer-about">
+
+            <h2>About Anime Finder</h2>
+
+            <p>
+                Anime Finder is a simple web application that allows users
+                to search for anime and view information about them.
+            </p>
+
+            <p>
+                This website uses HTML, CSS, JavaScript, and an Anime API
+                to retrieve and display anime information.
+            </p>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 Anime Finder | Integrative Programming Project
+        </p>
+
+    </footer>
+
+
+    <script src="cards.js"></script>
+    <script src="genre.js"></script>
+
+</body>
+</html>

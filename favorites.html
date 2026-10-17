@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites | Anime Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h1>Otaku Sleuth</h1>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="favorites.html" class="active-link">Favorites</a>
+        </div>
+    </nav>
+
+
+    <section class="genre-header">
+
+        <h2>My Favorites</h2>
+
+        <p id="favoritesSubtitle">Anime you have saved with the heart button.</p>
+
+    </section>
+
+
+    <section class="results-section">
+
+        <div id="animeResults" class="anime-results"></div>
+
+        <div id="emptyMessage" class="empty-message" hidden>
+            <p>You have no favorites yet.</p>
+            <a href="index.html" class="start-button">Find anime</a>
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <div class="footer-about">
+
+            <h2>About Anime Finder</h2>
+
+            <p>
+                Anime Finder is a simple web application that allows users
+                to search for anime and view information about them.
+            </p>
+
+            <p>
+                This website uses HTML, CSS, JavaScript, and an Anime API
+                to retrieve and display anime information.
+            </p>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 Anime Finder | Integrative Programming Project
+        </p>
+
+    </footer>
+
+
+    <script src="cards.js"></script>
+    <script src="favorites-page.js"></script>
+
+</body>
+</html>
