@@ -1165,6 +1165,15 @@ footer {
     }
 }
 
+/* ---------- SEARCH RESULTS PAGE ---------- */
+.search-again {
+    padding: 0 6% 40px;
+}
+
+.search-again .search-box {
+    margin-bottom: 0;
+}
+
 /* ---------- ANIMATIONS ---------- */
 @keyframes heroIn {
     from {
