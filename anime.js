@@ -236,24 +236,38 @@ function renderAnime(media) {
 
                     <div class="detail-genres">${genres}</div>
 
-                    <h3 class="detail-heading">Synopsis</h3>
-                    <p class="detail-synopsis" id="detailSynopsis"></p>
-
-                    <h3 class="detail-heading">Information</h3>
-                    <dl class="detail-list">${rowsHtml}</dl>
-
-                    ${trailerHtml}
-
                 </div>
+
+            </div>
+
+            <div class="detail-body">
+
+                <h3 class="detail-heading">Synopsis</h3>
+                <div class="detail-synopsis" id="detailSynopsis"></div>
+
+                <h3 class="detail-heading">Information</h3>
+                <dl class="detail-list">${rowsHtml}</dl>
+
+                ${trailerHtml}
 
             </div>
 
         </article>
     `;
 
-    // textContent keeps the synopsis safe from any markup in the API text
-    document.getElementById("detailSynopsis").textContent =
-        cleanDescription(media.description);
+    // One <p> per paragraph (blank lines collapsed); textContent keeps
+    // the synopsis safe from any markup in the API text
+    const synopsisBox = document.getElementById("detailSynopsis");
+
+    cleanDescription(media.description)
+        .split(/\n\s*\n/)
+        .map(paragraph => paragraph.trim())
+        .filter(paragraph => paragraph !== "")
+        .forEach(paragraph => {
+            const p = document.createElement("p");
+            p.textContent = paragraph;
+            synopsisBox.appendChild(p);
+        });
 
     // Same heart button as the cards, placed on the cover image
     const favoriteData = {

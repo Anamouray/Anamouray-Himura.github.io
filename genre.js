@@ -6,7 +6,7 @@ const genreTitle = document.getElementById("genreTitle");
 const genreSubtitle = document.getElementById("genreSubtitle");
 
 const API_URL = "https://graphql.anilist.co";
-
+ 
 const genre = new URLSearchParams(window.location.search).get("genre");
 
 let currentPage = 1;

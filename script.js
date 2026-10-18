@@ -1,4 +1,4 @@
-
+ 
 const animeInput = document.getElementById("animeInput");
 const searchButton = document.getElementById("searchButton");
 const animeResults = document.getElementById("animeResults");
