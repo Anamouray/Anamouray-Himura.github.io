@@ -11,7 +11,7 @@ function getFavorites() {
     } catch (error) {
         return [];
     }
-}
+}           
 
 function saveFavorites(list) {
     try {
