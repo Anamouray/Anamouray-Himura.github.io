@@ -1174,6 +1174,97 @@ footer {
     margin-bottom: 0;
 }
 
+/* ---------- GENRE BROWSER PAGE ---------- */
+.genre-buttons-section {
+    padding: 0 6% 20px;
+}
+
+.genre-buttons {
+    max-width: 950px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+.genre-button {
+    padding: 13px 28px;
+
+    font-family: inherit;
+    cursor: pointer;
+
+    color: var(--primary-dark);
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(73, 54, 128, 0.08);
+
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 800;
+
+    transition: 0.25s ease;
+}
+
+.genre-button:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--primary), #e16cae);
+    border-color: transparent;
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(118, 87, 232, 0.28);
+}
+
+.genre-button.active {
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--primary), #e16cae);
+    border-color: transparent;
+    box-shadow: 0 14px 28px rgba(118, 87, 232, 0.28);
+}
+
+.genre-search {
+    padding: 40px 6% 60px;
+    text-align: center;
+}
+
+.genre-results[hidden] {
+    display: none;
+}
+
+.genre-results-title {
+    margin-bottom: 30px;
+
+    font-family: "Outfit", sans-serif;
+    font-size: clamp(30px, 4.5vw, 46px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-align: center;
+
+    background: linear-gradient(90deg, var(--primary-dark), #a04fc4, #e16cae);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.genre-status {
+    min-height: 0;
+    text-align: center;
+    font-weight: 700;
+}
+
+#genreError {
+    color: #d64d78;
+}
+
+#genreLoading {
+    color: var(--primary);
+}
+
+.genre-search #errorMessage {
+    min-height: 0;
+}
+
 /* ---------- ANIMATIONS ---------- */
 @keyframes heroIn {
     from {

@@ -12,7 +12,7 @@ function updateState() {
         count === 0
             ? "Anime you have saved with the heart button."
             : count + (count === 1 ? " saved anime" : " saved anime titles");
-}                
+}
 
 function showFavorites() {
 

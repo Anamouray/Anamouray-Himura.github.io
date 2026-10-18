@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Genres | Anime Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h1>Otaku Sleuth</h1>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="genres.html" class="active-link">Genre</a>
+            <a href="favorites.html">Favorites</a>
+        </div>
+    </nav>
+
+
+    <section class="genre-header">
+
+        <h2>Browse by Genre</h2>
+
+        <p>Pick a genre to see its most popular anime.</p>
+
+    </section>
+
+
+    <section class="genre-buttons-section">
+
+        <div class="genre-buttons">
+            <button type="button" class="genre-button" data-genre="Action">Action</button>
+            <button type="button" class="genre-button" data-genre="Adventure">Adventure</button>
+            <button type="button" class="genre-button" data-genre="Comedy">Comedy</button>
+            <button type="button" class="genre-button" data-genre="Drama">Drama</button>
+            <button type="button" class="genre-button" data-genre="Ecchi">Ecchi</button>
+            <button type="button" class="genre-button" data-genre="Fantasy">Fantasy</button>
+            <button type="button" class="genre-button" data-genre="Horror">Horror</button>
+            <button type="button" class="genre-button" data-genre="Mahou Shoujo">Mahou Shoujo</button>
+            <button type="button" class="genre-button" data-genre="Mecha">Mecha</button>
+            <button type="button" class="genre-button" data-genre="Music">Music</button>
+            <button type="button" class="genre-button" data-genre="Mystery">Mystery</button>
+            <button type="button" class="genre-button" data-genre="Psychological">Psychological</button>
+            <button type="button" class="genre-button" data-genre="Romance">Romance</button>
+            <button type="button" class="genre-button" data-genre="Sci-Fi">Sci-Fi</button>
+            <button type="button" class="genre-button" data-genre="Slice of Life">Slice of Life</button>
+            <button type="button" class="genre-button" data-genre="Sports">Sports</button>
+            <button type="button" class="genre-button" data-genre="Supernatural">Supernatural</button>
+            <button type="button" class="genre-button" data-genre="Thriller">Thriller</button>
+        </div>
+
+    </section>
+
+
+    <section class="genre-search">
+
+        <div class="search-box">
+
+            <input type="text" id="animeInput" placeholder="Enter anime name...">
+
+            <button id="searchButton"> Search</button>
+
+        </div>
+
+        <p id="errorMessage"></p>
+
+    </section>
+
+
+    <section class="results-section genre-results" id="genreResults" hidden>
+
+        <h3 id="genreResultsTitle" class="genre-results-title"></h3>
+
+        <p id="genreError" class="genre-status"></p>
+
+        <p id="genreLoading" class="genre-status"></p>
+
+        <div id="genreAnimeResults" class="anime-results"></div>
+
+        <div class="load-more-wrap">
+            <button id="genreLoadMore" class="load-more-button" hidden>Load more</button>
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <div class="footer-about">
+
+            <h2>About Anime Finder</h2>
+
+            <p>
+                Anime Finder is a simple web application that allows users
+                to search for anime and view information about them.
+            </p>
+
+            <p>
+                This website uses HTML, CSS, JavaScript, and an Anime API
+                to retrieve and display anime information.
+            </p>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 Anime Finder | Integrative Programming Project
+        </p>
+
+    </footer>
+
+
+    <script src="cards.js"></script>
+    <script src="script.js"></script>
+    <script src="genres.js"></script>
+
+</body>
+</html>
