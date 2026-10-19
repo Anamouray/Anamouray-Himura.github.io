@@ -130,6 +130,13 @@
         title.textContent = "Popular " + genre + " Anime";
         section.hidden = false;
 
+        // Keep the chosen genre in the address so refresh and links work
+        try {
+            history.replaceState(null, "", "?genre=" + encodeURIComponent(genre));
+        } catch (err) {
+            // address bar update is optional
+        }
+
         buttons.forEach(function (button) {
             const active = button.dataset.genre === genre;
             button.classList.toggle("active", active);
@@ -153,5 +160,12 @@
         currentPage++;
         loadGenre();
     });
+
+    // Arriving from a genre link (e.g. on an anime card): open that genre right away
+    const requestedGenre = new URLSearchParams(window.location.search).get("genre");
+
+    if (requestedGenre && requestedGenre.trim() !== "") {
+        selectGenre(requestedGenre.trim());
+    }
 
 })();

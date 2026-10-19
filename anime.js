@@ -147,7 +147,7 @@ function renderAnime(media) {
     const genres =
         media.genres.length > 0
             ? media.genres.map(genre =>
-                `<a class="genre-chip" href="genre.html?genre=${encodeURIComponent(genre)}">${escapeHtml(genre)}</a>`
+                `<a class="genre-chip" href="genres.html?genre=${encodeURIComponent(genre)}">${escapeHtml(genre)}</a>`
               ).join("")
             : "<span class=\"detail-muted\">N/A</span>";
 

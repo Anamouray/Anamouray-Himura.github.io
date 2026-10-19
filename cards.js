@@ -113,7 +113,7 @@ function createAnimeCard(anime, onFavoriteChange) {
     const genres =
         anime.genres.length > 0
             ? anime.genres.map(genre =>
-                `<a class="genre-link" href="genre.html?genre=${encodeURIComponent(genre)}">${genre}</a>`
+                `<a class="genre-link" href="genres.html?genre=${encodeURIComponent(genre)}">${genre}</a>`
               ).join(", ")
             : "N/A";
 
