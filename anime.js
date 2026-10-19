@@ -335,14 +335,24 @@ async function loadAnime() {
     }
 }
 
-// Go back to wherever the person came from (results, genre page, favorites)
+// Back returns to the page the person opened this anime from
+// (search results, genre list, favorites or home)
+let previousPage = null;
+
+try {
+    previousPage = sessionStorage.getItem(BACK_URL_KEY);
+} catch (error) {
+    previousPage = null;
+}
+
+if (previousPage) {
+    backLink.href = previousPage;
+}
+
 backLink.addEventListener("click", function (event) {
 
-    const cameFromThisSite =
-        document.referrer &&
-        new URL(document.referrer).origin === window.location.origin;
-
-    if (cameFromThisSite && window.history.length > 1) {
+    // history.back() restores the earlier page just as it was
+    if (previousPage && window.history.length > 1) {
         event.preventDefault();
         window.history.back();
     }

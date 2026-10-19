@@ -149,3 +149,23 @@ function createAnimeCard(anime, onFavoriteChange) {
 
     return animeCard;
 }
+
+/* ---------- REMEMBER WHERE A DETAILS PAGE WAS OPENED FROM ---------- */
+// The details page's Back button uses this to return to the exact page
+// (search results, genre list, favorites, home) the person came from.
+const BACK_URL_KEY = "animeFinderBackUrl";
+
+document.addEventListener("click", function (event) {
+
+    const link = event.target.closest && event.target.closest('a[href^="anime.html"]');
+
+    if (!link) {
+        return;
+    }
+
+    try {
+        sessionStorage.setItem(BACK_URL_KEY, window.location.href);
+    } catch (error) {
+        console.error("Could not remember previous page:", error);
+    }
+});
